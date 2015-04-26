@@ -11,4 +11,4 @@ The app was built in a weekend (or so) by one designer and one developer.
 3. Open `Den.xcodeproj` in Xcode
 4. Hit Build and test it in the iPhone simulator
 
-<iframe src="https://player.vimeo.com/video/126065569" width="375" height="667" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+![Den](https://cloud.githubusercontent.com/assets/5133623/7338976/017b5728-ec13-11e4-9482-f335be506733.gif)
