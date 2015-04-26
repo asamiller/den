@@ -1,1 +1,12 @@
-# den
+# Den
+Den is an iPhone app built with React Native for viewing houses for sale in the NW from rmls.com. After being frsutrated with a site that hasn't changed since 2004, I decided to build a better viewing experince in the phone.
+
+The app was built in a weekend (or so) by one designer and one developer.
+
+![Den](https://cloud.githubusercontent.com/assets/5133623/7338976/017b5728-ec13-11e4-9482-f335be506733.gif)
+
+## Setup
+1. Clone the repo `git clone https://github.com/asamiller/den`
+2. Install dependencies `npm install`
+3. Open `Den.xcodeproj` in Xcode
+4. Hit Build and test it in the iPhone simulator
