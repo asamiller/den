@@ -6,7 +6,7 @@ The app was built in a weekend (or so) by one designer and one developer.
 ![Den](https://cloud.githubusercontent.com/assets/5133623/7338978/01976cce-ec13-11e4-9b79-f2e2e47503b6.jpg)
 
 ## JSON workaround
-Write now, React Native's bundler doesn't support JSON files. This means any module that requires a JSON file, doesn't work. [Cheerio](https://github.com/cheeriojs/cheerio) requires one, so to get it to work, I had to run it through Browserify first to package it all togheter. The React team has fixed this and it will be in the next release, but until then, I included a bundled version.
+Right now, React Native's bundler doesn't support JSON files. This means any module that requires a JSON file, doesn't work. [Cheerio](https://github.com/cheeriojs/cheerio) requires one, so to get it to work, I had to run it through Browserify first to package it all togheter. The React team has fixed this and it will be in the next release, but until then, I included a bundled version.
 
 ## Setup
 1. Clone the repo `git clone https://github.com/asamiller/den`
