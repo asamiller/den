@@ -70,7 +70,7 @@ var SearchScreen = React.createClass({
 	},
 
 	saveQueryOptions: function(key, value) {
-		console.log('saveQueryOptions', key, value);
+		// console.log('saveQueryOptions', key, value);
 		var temp = {};
 		temp[key] = value;
 		this.setState(temp);

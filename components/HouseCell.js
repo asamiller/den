@@ -36,7 +36,7 @@ var HouseCell = React.createClass({
 		);
 
 		if (this.props.type == 'saved') {
-			console.log(this.props.dateSaved, moment(this.props.dateSaved).fromNow());
+			// console.log(this.props.dateSaved, moment(this.props.dateSaved).fromNow());
 			ribbonBox = (
 				<View style={[styles.priceContainer, styles.dateContainer]}>
 					<Text style={[styles.priceText, styles.dateText]}>

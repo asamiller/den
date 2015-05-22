@@ -43,7 +43,6 @@ var SavedScreen = React.createClass({
 	},
 
 	componentDidUpdate: function(prevProps, prevState) {
-		console.log('componentDidUpdate');
 		if (!this.state.loading && this.props.tabClickTime > this.state.loadTime) this.getAllKeys();
 	},
 

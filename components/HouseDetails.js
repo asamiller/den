@@ -81,7 +81,7 @@ var HouseDetails = React.createClass({
 
 	processResults: function (html) {
 		var data = parse.houseDetail(html);
-		console.log(data);
+		// console.log(data);
 
 		this.setState({
 			houseKV: data.house,
@@ -123,7 +123,7 @@ var HouseDetails = React.createClass({
 
 	processImageResults: function (html) {
 		var data = parse.housePhotos(html);
-		console.log(data);
+		// console.log(data);
 
 		this.setState({
 			images: data,
