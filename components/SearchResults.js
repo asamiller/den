@@ -11,8 +11,6 @@ var {
 	View,
 } = React;
 
-var fetch = require('fetch');
-
 var HouseCell = require('./HouseCell.js');
 var HouseDetails = require('./HouseDetails.js');
 var SearchNoResults = require('./SearchNoResults.js');
