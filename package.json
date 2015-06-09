@@ -10,6 +10,7 @@
     "lodash": "^3.6.0",
     "moment": "^2.10.2",
     "react-native": "^0.4.4",
-    "string": "^3.1.1"
+    "string": "^3.1.1",
+    "core-util-is": "^1.0.1"
   }
 }
