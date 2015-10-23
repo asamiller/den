@@ -1,4 +1,6 @@
 # Den
+[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=562a841a6f3b010100cc3641&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/562a841a6f3b010100cc3641/build/latest)
+
 Den is an iPhone app built with React Native for viewing houses for sale in the NW from rmls.com. After being frsutrated with a site that hasn't changed since 2004, I decided to build a better viewing experince in the phone.
 
 The app was built in a weekend (or so) by one designer and one developer.
