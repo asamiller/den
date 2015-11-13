@@ -26,16 +26,16 @@ var PropertyTypePickerButton = React.createClass({
 	render: function() {
 		var isActive = this.props.value === this.props.current;
 
-		var icon = require('image!House');
+		var icon = {uri:"House"};
 
-		if (this.props.icon == 'condo') icon = require('image!Condo');
-		if (this.props.icon == 'multi') icon = require('image!Multi');
+		if (this.props.icon == 'condo') icon = {uri:"Condo"};
+		if (this.props.icon == 'multi') icon = {uri:"Multi"};
 
 		if (isActive) {
-			var icon = require('image!House-Active');
+			var icon = {uri:"House-Active"};
 
-			if (this.props.icon == 'condo') icon = require('image!Condo-Active');
-			if (this.props.icon == 'multi') icon = require('image!Multi-Active');
+			if (this.props.icon == 'condo') icon ={uri:"Condo-Active"};
+			if (this.props.icon == 'multi') icon = {uri:"Multi-Active"};
 		}
 
 		return (

@@ -40,10 +40,10 @@ var SaveButton = React.createClass({
 	},
 
 	render: function() {
-		var image = <Image source={require('image!Heart')} style={styles.image} />;
+		var image = <Image source={{uri:"Heart"}} style={styles.image} />;
 
 		if (this.state.saved) {
-			image = <Image source={require('image!Heart-Selected')} style={styles.image} />;
+			image = <Image source={{uri:"Heart-Selected"}} style={styles.image} />;
 		}
 
 		return (
