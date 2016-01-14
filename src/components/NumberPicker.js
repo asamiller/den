@@ -1,5 +1,5 @@
 import React from 'react-native';
-var {
+const {
   StyleSheet,
   Text,
   View,
@@ -9,7 +9,7 @@ var {
 import globalStyles from './SearchGlobalStyles.js';
 import NumberPickerItem from './NumberPickerItem.js';
 
-var NumberPicker = React.createClass({
+const NumberPicker = React.createClass({
 
   getDefaultProps() {
     return {
@@ -43,7 +43,7 @@ var NumberPicker = React.createClass({
 
 
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
 
 });
 

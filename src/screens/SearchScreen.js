@@ -1,5 +1,5 @@
 import React from 'react-native';
-var {
+const {
   TouchableOpacity,
   ScrollView,
   StyleSheet,
@@ -8,7 +8,7 @@ var {
 } = React;
 
 import Dimensions from 'Dimensions';
-var {width, height} = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 
 import PropertyTypePicker from './components/PropertyTypePicker.js';
 import BuiltRangePicker from './components/BuiltRangePicker.js';
@@ -20,7 +20,7 @@ import globalVariables from './globalVariables.js';
 
 
 
-var SearchScreen = React.createClass({
+const SearchScreen = React.createClass({
   
   getInitialState() {
     return {
@@ -67,13 +67,13 @@ var SearchScreen = React.createClass({
 
   saveQueryOptions(key, value) {
     // console.log('saveQueryOptions', key, value);
-    var temp = {};
+    const temp = {};
     temp[key] = value;
     this.setState(temp);
   },
 });
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 15,

@@ -1,5 +1,5 @@
-var React = require('react-native');
-var {
+const React = require('react-native');
+const {
   StyleSheet,
   Text,
   View,
@@ -7,9 +7,9 @@ var {
   TouchableWithoutFeedback
 } = React;
 
-var globalVariables = require('../globalVariables.js');
+const globalVariables = require('../globalVariables.js');
 
-var TabBarButton = React.createClass({
+const TabBarButton = React.createClass({
 
   getDefaultProps() {
     return {
@@ -20,8 +20,8 @@ var TabBarButton = React.createClass({
   },
 
   render() {
-    var icon;
-    var isSelected = (this.props.tab === this.props.selected);
+    let icon;
+    const isSelected = (this.props.tab === this.props.selected);
 
     if (this.props.tab === 'search') {
       icon = (isSelected) ? require('image!TabBar-House-Icon-Active') : require('image!TabBar-House-Icon');
@@ -48,7 +48,7 @@ var TabBarButton = React.createClass({
 });
 
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   button: {
     flex: 1,
     height: 49,

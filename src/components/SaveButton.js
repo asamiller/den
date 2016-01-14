@@ -1,5 +1,5 @@
-var React = require('react-native');
-var {
+const React = require('react-native');
+const {
   StyleSheet,
   Image,
   Text,
@@ -8,9 +8,9 @@ var {
   TouchableOpacity
 } = React;
 
-var _ = require('lodash');
+const _ = require('lodash');
 
-var SaveButton = React.createClass({
+const SaveButton = React.createClass({
 
   getInitialState() {
     return {
@@ -38,7 +38,7 @@ var SaveButton = React.createClass({
   },
 
   render() {
-    var image = <Image source={require('image!Heart')} style={styles.image} />;
+    let image = <Image source={require('image!Heart')} style={styles.image} />;
 
     if (this.state.saved) {
       image = <Image source={require('image!Heart-Selected')} style={styles.image} />;
@@ -63,7 +63,7 @@ var SaveButton = React.createClass({
 
     this.setState({ saved: true });
 
-    var data = _.extend({dateSaved: Date.now()}, this.props.data);
+    const data = _.extend({dateSaved: Date.now()}, this.props.data);
 
     AsyncStorage.setItem(this.STORAGE_KEY, JSON.stringify(data))
     .then(() => console.log('house saved: ', this.STORAGE_KEY))
@@ -83,7 +83,7 @@ var SaveButton = React.createClass({
   }
 });
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     position: 'absolute',
     top: 10,

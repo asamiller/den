@@ -1,5 +1,5 @@
 import React from 'react-native';
-var {
+const {
   Image,
   TouchableOpacity,
   StyleSheet,
@@ -10,7 +10,7 @@ var {
 import globalStyles from './SearchGlobalStyles.js';
 import YearPicker from './YearPicker.js';
 
-var BuiltRangePicker = React.createClass({
+const BuiltRangePicker = React.createClass({
 
   getDefaultProps() {
     return {
@@ -40,7 +40,7 @@ var BuiltRangePicker = React.createClass({
   }
 });
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   divider: {
     height: 20,
     width: 1,

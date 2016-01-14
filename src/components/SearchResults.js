@@ -1,5 +1,5 @@
-var React = require('react-native');
-var {
+const React = require('react-native');
+const {
   ActivityIndicatorIOS,
   ListView,
   StyleSheet,
@@ -9,15 +9,15 @@ var {
   View,
 } = React;
 
-var HouseCell = require('./HouseCell.js');
-var HouseDetails = require('./HouseDetails.js');
-var SearchNoResults = require('./SearchNoResults.js');
+const HouseCell = require('./HouseCell.js');
+const HouseDetails = require('./HouseDetails.js');
+const SearchNoResults = require('./SearchNoResults.js');
 
-var parse = require('../parsing/index.js');
+const parse = require('../parsing/index.js');
 
-var globalVariables = require('../globalVariables.js');
+const globalVariables = require('../globalVariables.js');
 
-var SearchResults = React.createClass({
+const SearchResults = React.createClass({
 
   getInitialState() {
     return {
@@ -122,8 +122,8 @@ var SearchResults = React.createClass({
 
 
   queryRMLS() {
-    var search = this.props.search;
-    var options = [
+    const search = this.props.search;
+    const options = [
       'ReportID=RC_RESULT',
       'SearchType=RC',
       'FormID=RC_SEARCH_RESIDENTIAL',
@@ -162,7 +162,7 @@ var SearchResults = React.createClass({
 
     this.setState({ searchPending: true });
 
-    var serialized = options.join('&');
+    const serialized = options.join('&');
 
     fetch('http://www.rmls.com/rc2/engine/sqlGenerator_RmlsCom.asp', {
       method: 'post',
@@ -215,13 +215,13 @@ var SearchResults = React.createClass({
 
 
   processsResults(html) {
-    var data = parse.searchResults(html);
+    const data = parse.searchResults(html);
     console.log(data);
 
     // cancel out if no houses were found
     if (!data.houses.length) return;
 
-    var newHouses = this.state.houses.concat(data.houses);
+    const newHouses = this.state.houses.concat(data.houses);
 
     this.setState({
       houses: newHouses,
@@ -233,7 +233,7 @@ var SearchResults = React.createClass({
   }
 });
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 64,

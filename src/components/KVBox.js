@@ -1,5 +1,5 @@
 import React from 'react-native';
-var {
+const {
   StyleSheet,
   Text,
   View,
@@ -7,7 +7,7 @@ var {
 
 import globalVariables from '../globalVariables.js';
 
-var KVBox = React.createClass({
+const KVBox = React.createClass({
 
   getDefaultProps() {
     return {
@@ -26,7 +26,7 @@ var KVBox = React.createClass({
   },
 });
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     padding: 5,

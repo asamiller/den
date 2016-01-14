@@ -1,5 +1,5 @@
 import React from 'react-native';
-var {
+const {
   ActivityIndicatorIOS,
   ListView,
   StyleSheet,
@@ -13,12 +13,12 @@ import _ from 'lodash';
 import HouseCell from './components/HouseCell.js';
 import HouseDetails from './components/HouseDetails.js';
 import Dimensions from 'Dimensions';
-var {width, height} = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 
-var SavedScreen = React.createClass({
+const SavedScreen = React.createClass({
   
   getInitialState() {
-    var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+    const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 
     return {
       dataSource: ds.cloneWithRows([]),
@@ -50,7 +50,7 @@ var SavedScreen = React.createClass({
     .then((value) => {
       if (value !== null){
         console.log('got keys', value);
-        var filteredKeys = _.filter(value, (n) => n.indexOf('@den-saved') >=0 );
+        const filteredKeys = _.filter(value, (n) => n.indexOf('@den-saved') >=0 );
         this.getAllItems(filteredKeys);
       } else {
         this.setState({ loading: false });
@@ -65,9 +65,9 @@ var SavedScreen = React.createClass({
     .then((value) => {
       if (value !== null){
         console.log('got items', value);
-        var items = [];
+        const items = [];
         value.map((item) => {
-          var json = null;
+          let json = null;
           try {
             json = JSON.parse(item[1]);
           }
@@ -126,7 +126,7 @@ var SavedScreen = React.createClass({
   },
 
   render() {
-    var content = (
+    const content = (
       <ListView
         ref="listview"
         dataSource={this.state.dataSource}
@@ -148,7 +148,7 @@ var SavedScreen = React.createClass({
   },
 });
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     backgroundColor: '#f5f5f5',
     height

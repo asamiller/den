@@ -1,5 +1,5 @@
 import React from 'react-native';
-var {
+const {
   StyleSheet,
   Image,
   Text,
@@ -8,7 +8,7 @@ var {
 
 import globalVariables from '../globalVariables.js';
 
-var SpecIconBox = React.createClass({
+const SpecIconBox = React.createClass({
   
   render() {
     return (
@@ -21,7 +21,7 @@ var SpecIconBox = React.createClass({
   },
 });
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
     padding: 20

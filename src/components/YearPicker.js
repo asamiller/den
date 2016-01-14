@@ -1,5 +1,5 @@
 import React from 'react-native';
-var {
+const {
   TouchableOpacity,
   StyleSheet,
   Text,
@@ -10,9 +10,9 @@ var {
 import globalVariables from '../globalVariables.js';
 
 
-var PickerItemIOS = PickerIOS.Item;
+const PickerItemIOS = PickerIOS.Item;
 
-var YearPicker = React.createClass({
+const YearPicker = React.createClass({
 
   getDefaultProps() {
     return {
@@ -23,9 +23,9 @@ var YearPicker = React.createClass({
   },
 
   render() {
-    var years = [];
+    const years = [];
 
-    for (var i=1850; i<=2020; i+=5) {
+    for (let i=1850; i<=2020; i+=5) {
       years.push(i);
     };
 
@@ -50,7 +50,7 @@ var YearPicker = React.createClass({
   }
 });
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
   },

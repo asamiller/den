@@ -1,5 +1,5 @@
-var React = require('react-native');
-var {
+const React = require('react-native');
+const {
   Image,
   TouchableOpacity,
   StyleSheet,
@@ -7,9 +7,9 @@ var {
   View,
 } = React;
 
-var globalVariables = require('../globalVariables.js');
+const globalVariables = require('../globalVariables.js');
 
-var PropertyTypePickerButton = React.createClass({
+const PropertyTypePickerButton = React.createClass({
 
   getDefaultProps() {
       return {
@@ -22,15 +22,15 @@ var PropertyTypePickerButton = React.createClass({
   },
 
   render() {
-    var isActive = this.props.value === this.props.current;
+    const isActive = this.props.value === this.props.current;
 
-    var icon = require('image!House');
+    let icon = require('image!House');
 
     if (this.props.icon == 'condo') icon = require('image!Condo');
     if (this.props.icon == 'multi') icon = require('image!Multi');
 
     if (isActive) {
-      var icon = require('image!House-Active');
+      let icon = require('image!House-Active');
 
       if (this.props.icon == 'condo') icon = require('image!Condo-Active');
       if (this.props.icon == 'multi') icon = require('image!Multi-Active');
@@ -55,7 +55,7 @@ var PropertyTypePickerButton = React.createClass({
 
 });
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   tapAreaView: {
     alignItems: 'center',
   },

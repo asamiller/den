@@ -1,5 +1,5 @@
 import React from 'react-native';
-var {
+const {
   AppRegistry,
   StyleSheet,
   Text,
@@ -10,7 +10,7 @@ var {
 } = React;
 
 import Dimensions from 'Dimensions';
-var {width, height} = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 
 import ScreenNavigator from './ScreenNavigator.js';
 import SearchScreen from './SearchScreen.js';
@@ -18,7 +18,7 @@ import SavedScreen from './SavedScreen.js';
 import TabBarButton from './components/TabBarButton.js';
 import globalVariables from './globalVariables.js';
 
-var Den = React.createClass({
+const Den = React.createClass({
 
   getInitialState() {
     return {
@@ -27,7 +27,7 @@ var Den = React.createClass({
   },
 
   render() {
-    var screenElement;
+    let screenElement;
 
     if (this.state.tab == 'saved') screenElement = (<ScreenNavigator title='Saved' component={SavedScreen} key='saved' />);
     else screenElement = (<ScreenNavigator title='Search' component={SearchScreen} key='search' />);
@@ -51,7 +51,7 @@ var Den = React.createClass({
   },
 });
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   app: { width, height },
 
   tabbar: {

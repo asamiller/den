@@ -1,14 +1,14 @@
 import React from 'react-native';
-var {
+const {
   StyleSheet,
   Image,
   View,
 } = React;
 
 import Dimensions from 'Dimensions';
-var {width, height} = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 
-var HouseDetailsCaroselImage = React.createClass({
+const HouseDetailsCaroselImage = React.createClass({
   getDefaultProps() {
     return {
       image: ''
@@ -25,7 +25,7 @@ var HouseDetailsCaroselImage = React.createClass({
   },
 });
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     height: 240,
     width,

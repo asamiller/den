@@ -1,5 +1,5 @@
 import React from 'react-native';
-var {
+const {
   TouchableOpacity,
   StyleSheet,
   Text,
@@ -9,9 +9,9 @@ var {
 
 import globalVariables from '../globalVariables.js';
 
-var PickerItemIOS = PickerIOS.Item;
+const PickerItemIOS = PickerIOS.Item;
 
-var PricePicker = React.createClass({
+const PricePicker = React.createClass({
 
   getDefaultProps() {
     return {
@@ -22,9 +22,9 @@ var PricePicker = React.createClass({
   },
 
   render() {
-    var amounts = [];
+    const amounts = [];
 
-    for (var i=100; i<=900; i+=100) {
+    for (let i=100; i<=900; i+=100) {
       amounts.push({ label: i + 'k', value: i });
     };
 
@@ -51,7 +51,7 @@ var PricePicker = React.createClass({
   }
 });
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
   },

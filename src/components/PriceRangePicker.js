@@ -1,5 +1,5 @@
 import React from 'react-native';
-var {
+const {
   Image,
   TouchableOpacity,
   StyleSheet,
@@ -10,7 +10,7 @@ var {
 import globalStyles from './SearchGlobalStyles.js';
 import PricePicker from './PricePicker.js';
 
-var PriceRangePicker = React.createClass({
+const PriceRangePicker = React.createClass({
 
   getDefaultProps() {
     return {
@@ -40,7 +40,7 @@ var PriceRangePicker = React.createClass({
   }
 });
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   divider: {
     height: 20,
     width: 1,

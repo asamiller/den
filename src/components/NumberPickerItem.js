@@ -1,5 +1,5 @@
 import React from 'react-native';
-var {
+const {
   TouchableOpacity,
   StyleSheet,
   Text,
@@ -9,7 +9,7 @@ var {
 import globalVariables from '../globalVariables.js';
 
 
-var NumberPickerItem = React.createClass({
+const NumberPickerItem = React.createClass({
   getDefaultProps() {
     return {
       onChange() {},
@@ -19,8 +19,8 @@ var NumberPickerItem = React.createClass({
   },
 
   render() {
-    var selectedBox = {};
-    var selectedText = {};
+    const selectedBox = {};
+    const selectedText = {};
 
     if (this.props.value == this.props.current) {
       selectedBox.borderColor = globalVariables.green;
@@ -44,7 +44,7 @@ var NumberPickerItem = React.createClass({
 
 
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     // padding: 20,
     borderColor: 'white',

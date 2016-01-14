@@ -1,14 +1,14 @@
 import React from 'react-native';
-var {
+const {
   NavigatorIOS,
   StyleSheet
 } = React;
 
 import globalVariables from './globalVariables.js';
 import Dimensions from 'Dimensions';
-var {width, height} = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 
-var ScreenNavigator = React.createClass({
+const ScreenNavigator = React.createClass({
   getDefaultProps() {
     return {
       title: '',
@@ -26,7 +26,7 @@ var ScreenNavigator = React.createClass({
   },
 });
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     width, 
     height: height - 49

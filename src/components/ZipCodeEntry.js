@@ -1,5 +1,5 @@
-var React = require('react-native');
-var {
+const React = require('react-native');
+const {
   Image,
   TouchableOpacity,
   StyleSheet,
@@ -8,11 +8,11 @@ var {
   TextInput
 } = React;
 
-var globalStyles = require('./SearchGlobalStyles.js');
-var _ = require('lodash');
-var globalVariables = require('../globalVariables.js');
+const globalStyles = require('./SearchGlobalStyles.js');
+const _ = require('lodash');
+const globalVariables = require('../globalVariables.js');
 
-var ZipCodeEntry = React.createClass({
+const ZipCodeEntry = React.createClass({
   getDefaultProps() {
     return {
       onChange() {},
@@ -41,20 +41,20 @@ var ZipCodeEntry = React.createClass({
   },
 
   handleZipAddition(value) {
-    var zips = (_.clone(this.props.value) || []);
+    const zips = (_.clone(this.props.value) || []);
     zips.push(value);
     this.props.onChange('zipCodes', zips);
   },
 
   handleZipRemove(index) {
-    var zips = (_.clone(this.props.value) || []);
+    const zips = (_.clone(this.props.value) || []);
     zips.splice(index, 1);
     this.props.onChange('zipCodes', zips);
   }
 });
 
 
-var ZipCodeInput = React.createClass({
+const ZipCodeInput = React.createClass({
   getInitialState() {
     return {
       value: ''
@@ -94,7 +94,7 @@ var ZipCodeInput = React.createClass({
 });
 
 
-var ZipCodeBox = React.createClass({
+const ZipCodeBox = React.createClass({
   getDefaultProps() {
     return {
       value: null,
@@ -124,7 +124,7 @@ var ZipCodeBox = React.createClass({
 
 
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   innerBox: {
     flexDirection: 'column'
   },

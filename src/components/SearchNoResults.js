@@ -1,17 +1,17 @@
-var React = require('react-native');
-var {
+const React = require('react-native');
+const {
   StyleSheet,
   Image,
   Text,
   View,
 } = React;
 
-var Dimensions = require('Dimensions');
-var {width, height} = Dimensions.get('window');
+const Dimensions = require('Dimensions');
+const {width, height} = Dimensions.get('window');
 
-var globalVariables = require('../globalVariables.js');
+const globalVariables = require('../globalVariables.js');
 
-var SearchNoResults = React.createClass({
+const SearchNoResults = React.createClass({
 
   render() {
     return (
@@ -26,7 +26,7 @@ var SearchNoResults = React.createClass({
   }
 });
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   view: {
     flexDirection: 'column',
     justifyContent: 'center',

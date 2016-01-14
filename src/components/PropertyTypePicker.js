@@ -1,5 +1,5 @@
 import React from 'react-native';
-var {
+const {
   Image,
   TouchableOpacity,
   StyleSheet,
@@ -10,7 +10,7 @@ var {
 import PropertyTypePickerButton from './PropertyTypePickerButton.js';
 import styles from './SearchGlobalStyles.js';
 
-var PropertyTypePicker = React.createClass({
+const PropertyTypePicker = React.createClass({
 
   getDefaultProps() {
     return {

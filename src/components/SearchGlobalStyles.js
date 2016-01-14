@@ -1,11 +1,11 @@
 import React from 'react-native';
-var {
+const {
   StyleSheet,
 } = React;
 
 import globalVariables from '../globalVariables.js';
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     marginBottom: 20,
   },

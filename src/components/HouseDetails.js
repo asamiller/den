@@ -1,5 +1,5 @@
-var React = require('react-native');
-var {
+const React = require('react-native');
+const {
   ScrollView,
   StyleSheet,
   Image,
@@ -8,22 +8,22 @@ var {
   MapView,
 } = React;
 
-var _ = require('lodash');
-var Dimensions = require('Dimensions');
-var {width, height} = Dimensions.get('window');
+const _ = require('lodash');
+const Dimensions = require('Dimensions');
+const {width, height} = Dimensions.get('window');
 
-var HouseDetailsCaroselImage = require('./HouseDetailsCaroselImage.js');
-var SpecIconBox = require('./SpecIconBox.js');
-var KVBox = require('./KVBox.js');
+const HouseDetailsCaroselImage = require('./HouseDetailsCaroselImage.js');
+const SpecIconBox = require('./SpecIconBox.js');
+const KVBox = require('./KVBox.js');
 
-var SaveButton = require('./SaveButton.js');
+const SaveButton = require('./SaveButton.js');
 
-var parse = require('../parsing/index.js');
+const parse = require('../parsing/index.js');
 
-var globalVariables = require('../globalVariables.js');
+const globalVariables = require('../globalVariables.js');
 
 
-var HouseDetails = React.createClass({
+const HouseDetails = React.createClass({
   
   getInitialState() {
     return {
@@ -78,7 +78,7 @@ var HouseDetails = React.createClass({
   },
 
   processResults(html) {
-    var data = parse.houseDetail(html);
+    const data = parse.houseDetail(html);
     // console.log(data);
 
     this.setState({
@@ -120,7 +120,7 @@ var HouseDetails = React.createClass({
   },
 
   processImageResults(html) {
-    var data = parse.housePhotos(html);
+    const data = parse.housePhotos(html);
     // console.log(data);
 
     this.setState({
@@ -138,7 +138,7 @@ var HouseDetails = React.createClass({
 
       if (!_.isArray(response.results)) return;
 
-      var location = response.results[0].geometry.location;
+      const location = response.results[0].geometry.location;
 
       this.setState({
         latitude: location.lat,
@@ -155,10 +155,10 @@ var HouseDetails = React.createClass({
 
 
   render() {
-    var houseKV = this.props.houseKV || this.state.houseKV || {};
-    var images = this.props.images || this.state.images || [this.props.house.image] || [];
+    const houseKV = this.props.houseKV || this.state.houseKV || {};
+    const images = this.props.images || this.state.images || [this.props.house.image] || [];
 
-    var kvElements = [];
+    const kvElements = [];
     _.each(_.omit(houseKV, ["Address", "Price", "Beds", "Baths", "SQFT", "Tax/Year", "REMARKS"]), function (item, key) {
       if (!key || !item) return;
 
@@ -168,7 +168,7 @@ var HouseDetails = React.createClass({
 
     });
 
-    var caroselImages = [];
+    const caroselImages = [];
 
     _.each(images, function (item) {
       caroselImages.push(
@@ -176,7 +176,7 @@ var HouseDetails = React.createClass({
       );
     });
 
-    var mapPins = [];
+    let mapPins = [];
     if (this.state.latitude) {
       mapPins = [{
         latitude: this.state.latitude, 
@@ -186,7 +186,7 @@ var HouseDetails = React.createClass({
     }
 
     // data to save into favorites
-    var saveData = {
+    const saveData = {
       house: this.props.house,
       images,
       houseKV,
@@ -263,7 +263,7 @@ var HouseDetails = React.createClass({
   },
 });
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     backgroundColor: globalVariables.background,
   },

@@ -1,5 +1,5 @@
-var React = require('react-native');
-var {
+const React = require('react-native');
+const {
   ActivityIndicatorIOS,
   Image,
   PixelRatio,
@@ -9,14 +9,14 @@ var {
   View
 } = React;
 
-var globalVariables = require('../globalVariables.js');
+const globalVariables = require('../globalVariables.js');
 
-var moment = require('moment');
+const moment = require('moment');
 
-var Dimensions = require('Dimensions');
-var {width, height} = Dimensions.get('window');
+const Dimensions = require('Dimensions');
+const {width, height} = Dimensions.get('window');
 
-var HouseCell = React.createClass({
+const HouseCell = React.createClass({
   getDefaultProps() {
     return {
       house: {},
@@ -25,7 +25,7 @@ var HouseCell = React.createClass({
   },
   
   render() {
-    var ribbonBox = (
+    let ribbonBox = (
       <View style={styles.priceContainer}>
         <Text style={styles.priceText}>
           {this.props.house.specs.Price}
@@ -87,7 +87,7 @@ var HouseCell = React.createClass({
   }
 });
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   item: {
     backgroundColor: 'white',
     margin: 28,
