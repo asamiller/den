@@ -109,7 +109,7 @@ var ZipCodeBox = React.createClass({
 			<View style={styles.zipView}>
 				<Text style={styles.zipText}>{this.props.value}</Text>
 				<TouchableOpacity onPress={this.handleClear}>
-					<Image style={styles.clearBtn} source={require('image!Clear')} />
+					<Image style={styles.clearBtn} source={{uri:"Clear"}} />
 				</TouchableOpacity>
 			</View>
 		);

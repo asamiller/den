@@ -26,11 +26,11 @@ var TabBarButton = React.createClass({
 		var isSelected = (this.props.tab === this.props.selected);
 
 		if (this.props.tab === 'search') {
-			icon = (isSelected) ? require('image!TabBar-House-Icon-Active') : require('image!TabBar-House-Icon');
+			icon = (isSelected) ?{uri:"TabBar-House-Icon-Active"}:{uri:"TabBar-House-Icon"};
 		}
 
 		if (this.props.tab === 'saved') {
-			icon = (isSelected) ? require('image!TabBar-Favorite-Icon-Active') : require('image!TabBar-Favorite-Icon');
+			icon = (isSelected) ?{uri:"TabBar-Favorite-Icon-Active"}:{uri:"TabBar-Favorite-Icon"};
 		}
 
 		return (

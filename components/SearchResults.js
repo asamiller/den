@@ -55,7 +55,7 @@ var SearchResults = React.createClass({
 		if (!this.state.next && !this.state.searchPending) {
 			return (
 				<View style={styles.doneView}>
-					<Image source={require('image!foxy')} style={styles.doneImage} />
+					<Image source={{uri:"foxy"}} style={styles.doneImage} />
 				</View>
 			);
 		}

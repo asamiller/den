@@ -18,7 +18,7 @@ var SearchNoResults = React.createClass({
 	render: function() {
 		return (
 			<View style={styles.view}>
-				<Image source={require('image!sad-foxy')} style={styles.image} />
+				<Image source={{uri:"sad-foxy"}} style={styles.image} />
 				<Text style={styles.text}>
 					Oh no! There aren’t any houses 
 					that match your search!
