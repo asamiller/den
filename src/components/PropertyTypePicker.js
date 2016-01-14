@@ -12,14 +12,14 @@ import styles from './SearchGlobalStyles.js';
 
 var PropertyTypePicker = React.createClass({
 
-  getDefaultProps: function () {
+  getDefaultProps() {
     return {
-      onChange: function () {},
+      onChange() {},
       value: null
     };
   },
 
-  render: function() {
+  render() {
     return (
       <View style={styles.container}>
         <Text style={styles.label}>Propery Type</Text>
@@ -49,7 +49,7 @@ var PropertyTypePicker = React.createClass({
     );
   },
 
-  handleChange: function (value) {
+  handleChange(value) {
     this.props.onChange('propertyType', value);
   }
 });

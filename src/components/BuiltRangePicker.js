@@ -12,14 +12,14 @@ import YearPicker from './YearPicker.js';
 
 var BuiltRangePicker = React.createClass({
 
-  getDefaultProps: function () {
+  getDefaultProps() {
     return {
-      onChange: function () {},
+      onChange() {},
       value: []
     };
   },
 
-  render: function() {
+  render() {
     return (
       <View style={globalStyles.container}>
         <Text style={globalStyles.label}>Built Between</Text>
@@ -31,11 +31,11 @@ var BuiltRangePicker = React.createClass({
     );
   },
 
-  handleStartChange: function (value) {
+  handleStartChange(value) {
     this.props.onChange('builtRange', [value, this.props.value[1]]);
   },
 
-  handleEndChange: function (value) {
+  handleEndChange(value) {
     this.props.onChange('builtRange', [this.props.value[0], value]);
   }
 });

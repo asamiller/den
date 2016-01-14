@@ -10,15 +10,15 @@ import globalVariables from '../globalVariables.js';
 
 
 var NumberPickerItem = React.createClass({
-  getDefaultProps: function () {
+  getDefaultProps() {
     return {
-      onChange: function () {},
+      onChange() {},
       value: 1,
       current: 0
     };
   },
 
-  render: function() {
+  render() {
     var selectedBox = {};
     var selectedText = {};
 
@@ -37,7 +37,7 @@ var NumberPickerItem = React.createClass({
     );
   },
 
-  handleChange: function () {
+  handleChange() {
     this.props.onChange(this.props.value);
   }
 });

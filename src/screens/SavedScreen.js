@@ -17,7 +17,7 @@ var {width, height} = Dimensions.get('window');
 
 var SavedScreen = React.createClass({
   
-  getInitialState: function() {
+  getInitialState() {
     var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 
     return {
@@ -28,22 +28,22 @@ var SavedScreen = React.createClass({
     };
   },
 
-  getDefaultProps: function() {
+  getDefaultProps() {
     return {
       tabClickTime: 0,
     };
   },
 
-  componentDidMount: function() {
+  componentDidMount() {
     this.getAllKeys();
   },
 
-  componentDidUpdate: function(prevProps, prevState) {
+  componentDidUpdate(prevProps, prevState) {
     if (!this.state.loading && this.props.tabClickTime > this.state.loadTime) this.getAllKeys();
   },
 
 
-  getAllKeys: function() {
+  getAllKeys() {
     this.setState({ loadTime: Date.now() });
 
     return AsyncStorage.getAllKeys()
@@ -60,7 +60,7 @@ var SavedScreen = React.createClass({
     .done();
   },
 
-  getAllItems: function(keys) {
+  getAllItems(keys) {
     return AsyncStorage.multiGet(keys)
     .then((value) => {
       if (value !== null){
@@ -81,7 +81,7 @@ var SavedScreen = React.createClass({
 
         this.setState({
           dataSource: this.state.dataSource.cloneWithRows(items),
-          items: items,
+          items,
           loading: false
         });
         
@@ -94,12 +94,12 @@ var SavedScreen = React.createClass({
   },
 
 
-  onEndReached: function() {
+  onEndReached() {
     console.log('onEndReached');
   },
 
 
-  selectHouse: function(data) {
+  selectHouse(data) {
     console.log('selectHouse', data);
 
     this.props.navigator.push({
@@ -113,7 +113,7 @@ var SavedScreen = React.createClass({
     });
   },
 
-  renderRow: function(data)  {
+  renderRow(data) {
     return (
       <HouseCell
         onSelect={() => this.selectHouse(data)}
@@ -125,7 +125,7 @@ var SavedScreen = React.createClass({
     );
   },
 
-  render: function() {
+  render() {
     var content = (
       <ListView
         ref="listview"
@@ -151,7 +151,7 @@ var SavedScreen = React.createClass({
 var styles = StyleSheet.create({
   container: {
     backgroundColor: '#f5f5f5',
-    height: height
+    height
   },
   centerText: {
     alignItems: 'center',

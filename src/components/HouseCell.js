@@ -17,14 +17,14 @@ var Dimensions = require('Dimensions');
 var {width, height} = Dimensions.get('window');
 
 var HouseCell = React.createClass({
-  getDefaultProps: function() {
+  getDefaultProps() {
     return {
       house: {},
       type: 'search'
     };
   },
   
-  render: function() {
+  render() {
     var ribbonBox = (
       <View style={styles.priceContainer}>
         <Text style={styles.priceText}>

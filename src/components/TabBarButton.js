@@ -11,15 +11,15 @@ var globalVariables = require('../globalVariables.js');
 
 var TabBarButton = React.createClass({
 
-  getDefaultProps: function() {
+  getDefaultProps() {
     return {
       tab: 'search',
       selected: 'search',
-      onChange: function () {}
+      onChange() {}
     };
   },
 
-  render: function() {
+  render() {
     var icon;
     var isSelected = (this.props.tab === this.props.selected);
 
@@ -41,7 +41,7 @@ var TabBarButton = React.createClass({
     );
   },
 
-  handlePress: function () {
+  handlePress() {
     console.log('handlePress', this.props.tab);
     this.props.onChange(this.props.tab);
   }

@@ -12,14 +12,14 @@ import PricePicker from './PricePicker.js';
 
 var PriceRangePicker = React.createClass({
 
-  getDefaultProps: function () {
+  getDefaultProps() {
     return {
-      onChange: function () {},
+      onChange() {},
       value: []
     };
   },
 
-  render: function() {
+  render() {
     return (
       <View style={globalStyles.container}>
         <Text style={globalStyles.label}>Price Between</Text>
@@ -31,11 +31,11 @@ var PriceRangePicker = React.createClass({
     );
   },
 
-  handleStartChange: function (value) {
+  handleStartChange(value) {
     this.props.onChange('priceRange', [value, this.props.value[1]]);
   },
 
-  handleEndChange: function (value) {
+  handleEndChange(value) {
     this.props.onChange('priceRange', [this.props.value[0], value]);
   }
 });

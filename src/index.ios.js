@@ -20,13 +20,13 @@ import globalVariables from './globalVariables.js';
 
 var Den = React.createClass({
 
-  getInitialState: function() {
+  getInitialState() {
     return {
       tab: 'search',
     };
   },
 
-  render: function() {
+  render() {
     var screenElement;
 
     if (this.state.tab == 'saved') screenElement = (<ScreenNavigator title='Saved' component={SavedScreen} key='saved' />);
@@ -44,9 +44,9 @@ var Den = React.createClass({
   },
 
 
-  handleSelect: function(tab) {
+  handleSelect(tab) {
     this.setState({
-      tab: tab,
+      tab,
     });
   },
 });
@@ -55,7 +55,7 @@ var styles = StyleSheet.create({
   app: { width, height },
 
   tabbar: {
-    width: width,
+    width,
     height: 49,
     shadowColor: 'black',
      shadowOffset: { height: -2, width: 0 },

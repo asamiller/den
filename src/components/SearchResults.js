@@ -19,7 +19,7 @@ var globalVariables = require('../globalVariables.js');
 
 var SearchResults = React.createClass({
 
-  getInitialState: function() {
+  getInitialState() {
     return {
       dataSource: new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2}),
       houses: [],
@@ -28,7 +28,7 @@ var SearchResults = React.createClass({
     };
   },
 
-  getDefaultProps: function() {
+  getDefaultProps() {
     return {
       search: {
         priceRange : [],
@@ -40,16 +40,16 @@ var SearchResults = React.createClass({
     };
   },
 
-  componentDidMount: function() {
+  componentDidMount() {
     // console.log(this.props.search);
     this.queryRMLS();
   },
 
-  getDataSource: function(houses) {
+  getDataSource(houses) {
     return this.state.dataSource.cloneWithRows(houses);
   },
 
-  renderFooter: function() {
+  renderFooter() {
     if (!this.state.next && !this.state.searchPending) {
       return (
         <View style={styles.doneView}>
@@ -61,7 +61,7 @@ var SearchResults = React.createClass({
     return <ActivityIndicatorIOS style={styles.scrollSpinner} />;
   },
 
-  onEndReached: function() {
+  onEndReached() {
     console.log('onEndReached');
 
     if (this.state.next && !this.state.searchPending) {
@@ -69,20 +69,20 @@ var SearchResults = React.createClass({
     }
   },
 
-  selectHouse: function(house) {
+  selectHouse(house) {
     console.log('selectHouse');
 
     this.props.navigator.push({
       component: HouseDetails,
       title: 'Details',
       passProps: {
-        house: house,
+        house,
         form: this.state.form
       },
     });
   },
 
-  renderRow: function(house)  {
+  renderRow(house) {
     return (
       <HouseCell
         onSelect={() => this.selectHouse(house)}
@@ -92,7 +92,7 @@ var SearchResults = React.createClass({
     );
   },
 
-  render: function() {
+  render() {
     if (!this.state.searchPending && !this.state.houses.length) {
       return (
         <View style={styles.container}>
@@ -121,7 +121,7 @@ var SearchResults = React.createClass({
 
 
 
-  queryRMLS: function () {
+  queryRMLS() {
     var search = this.props.search;
     var options = [
       'ReportID=RC_RESULT',
@@ -188,7 +188,7 @@ var SearchResults = React.createClass({
 
 
 
-  getRMLSPagination: function (page, form) {
+  getRMLSPagination(page, form) {
     console.log('get page', page);
     this.setState({ searchPending: true });
 
@@ -214,7 +214,7 @@ var SearchResults = React.createClass({
 
 
 
-  processsResults: function (html) {
+  processsResults(html) {
     var data = parse.searchResults(html);
     console.log(data);
 

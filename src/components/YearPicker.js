@@ -14,15 +14,15 @@ var PickerItemIOS = PickerIOS.Item;
 
 var YearPicker = React.createClass({
 
-  getDefaultProps: function () {
+  getDefaultProps() {
     return {
-      onChange: function () {},
+      onChange() {},
       value: 2014,
       label: ''
     };
   },
 
-  render: function() {
+  render() {
     var years = [];
 
     for (var i=1850; i<=2020; i+=5) {
@@ -44,7 +44,7 @@ var YearPicker = React.createClass({
     );
   },
 
-  handleChange: function (value) {
+  handleChange(value) {
     console.log('handleChange', value);
     this.props.onChange(value);
   }

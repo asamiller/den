@@ -25,7 +25,7 @@ var globalVariables = require('../globalVariables.js');
 
 var HouseDetails = React.createClass({
   
-  getInitialState: function() {
+  getInitialState() {
     return {
       searchPending: false,
       houseKV: {},
@@ -37,7 +37,7 @@ var HouseDetails = React.createClass({
     };
   },
 
-  getDefaultProps: function() {
+  getDefaultProps() {
     return {
       form: {},
       house: {},
@@ -46,12 +46,12 @@ var HouseDetails = React.createClass({
     };
   },
 
-  componentDidMount: function() {
+  componentDidMount() {
     this.getRMLSDetail();
     if (this.props.house.specs && this.props.house.specs.Address) this.geocodeAddress(this.props.house.specs.Address);
   },
 
-  getRMLSDetail: function () {
+  getRMLSDetail() {
     console.log('get detail', this.props.house.id);
     this.setState({ searchPending: true });
 
@@ -77,7 +77,7 @@ var HouseDetails = React.createClass({
     });
   },
 
-  processResults: function (html) {
+  processResults(html) {
     var data = parse.houseDetail(html);
     // console.log(data);
 
@@ -94,7 +94,7 @@ var HouseDetails = React.createClass({
 
 
 
-  getRMLSImages: function (photosID) {
+  getRMLSImages(photosID) {
     console.log('get images', photosID);
     this.setState({ searchPending: true });
 
@@ -119,7 +119,7 @@ var HouseDetails = React.createClass({
     });
   },
 
-  processImageResults: function (html) {
+  processImageResults(html) {
     var data = parse.housePhotos(html);
     // console.log(data);
 
@@ -130,7 +130,7 @@ var HouseDetails = React.createClass({
   },
 
 
-  geocodeAddress: function (address) {
+  geocodeAddress(address) {
     fetch(globalVariables.geocodeServer + '?address='+encodeURIComponent(address))
     .then((response) => response.json())
     .then((response) => {
@@ -154,7 +154,7 @@ var HouseDetails = React.createClass({
   },
 
 
-  render: function() {
+  render() {
     var houseKV = this.props.houseKV || this.state.houseKV || {};
     var images = this.props.images || this.state.images || [this.props.house.image] || [];
 
@@ -188,8 +188,8 @@ var HouseDetails = React.createClass({
     // data to save into favorites
     var saveData = {
       house: this.props.house,
-      images: images,
-      houseKV: houseKV,
+      images,
+      houseKV,
     };
 
     return (
@@ -277,7 +277,7 @@ var styles = StyleSheet.create({
 
   // CAROSEL
   carosel: {
-    width: width,
+    width,
     height: 245,
     // borderColor: 'red',
     // borderWidth: 1

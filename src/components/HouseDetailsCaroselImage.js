@@ -9,12 +9,12 @@ import Dimensions from 'Dimensions';
 var {width, height} = Dimensions.get('window');
 
 var HouseDetailsCaroselImage = React.createClass({
-  getDefaultProps: function() {
+  getDefaultProps() {
     return {
       image: ''
     };
   },
-  render: function() {
+  render() {
     return (
       <View style={styles.container}>
         <Image
@@ -28,7 +28,7 @@ var HouseDetailsCaroselImage = React.createClass({
 var styles = StyleSheet.create({
   container: {
     height: 240,
-    width: width,
+    width,
     // borderColor: 'red',
     // borderWidth: 1
   },

@@ -13,7 +13,7 @@ var globalVariables = require('../globalVariables.js');
 
 var SearchNoResults = React.createClass({
 
-  render: function() {
+  render() {
     return (
       <View style={styles.view}>
         <Image source={require('image!sad-foxy')} style={styles.image} />

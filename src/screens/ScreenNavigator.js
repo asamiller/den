@@ -9,13 +9,13 @@ import Dimensions from 'Dimensions';
 var {width, height} = Dimensions.get('window');
 
 var ScreenNavigator = React.createClass({
-  getDefaultProps: function() {
+  getDefaultProps() {
     return {
       title: '',
       component: null
     };
   },
-  render: function() {
+  render() {
     return (
       <NavigatorIOS
         style={styles.container}
@@ -28,7 +28,7 @@ var ScreenNavigator = React.createClass({
 
 var styles = StyleSheet.create({
   container: {
-    width: width, 
+    width, 
     height: height - 49
   },
 });

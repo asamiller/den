@@ -9,14 +9,14 @@ import globalVariables from '../globalVariables.js';
 
 var KVBox = React.createClass({
 
-  getDefaultProps: function() {
+  getDefaultProps() {
     return {
       label: '',
       value: ''
     };
   },
   
-  render: function() {
+  render() {
     return (
       <View style={styles.container}>
         <Text style={styles.label}>{this.props.label}</Text>

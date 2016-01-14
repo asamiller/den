@@ -13,15 +13,15 @@ var PickerItemIOS = PickerIOS.Item;
 
 var PricePicker = React.createClass({
 
-  getDefaultProps: function () {
+  getDefaultProps() {
     return {
-      onChange: function () {},
+      onChange() {},
       value: 100,
       label: ''
     };
   },
 
-  render: function() {
+  render() {
     var amounts = [];
 
     for (var i=100; i<=900; i+=100) {
@@ -45,7 +45,7 @@ var PricePicker = React.createClass({
     );
   },
 
-  handleChange: function (value) {
+  handleChange(value) {
     console.log('handleChange', value);
     this.props.onChange(value);
   }

@@ -13,14 +13,14 @@ var _ = require('lodash');
 var globalVariables = require('../globalVariables.js');
 
 var ZipCodeEntry = React.createClass({
-  getDefaultProps: function () {
+  getDefaultProps() {
     return {
-      onChange: function () {},
+      onChange() {},
       value: null,
     };
   },
 
-  render: function() {
+  render() {
     return (
       <View style={globalStyles.container}>
         <Text style={globalStyles.label}>Zip Codes</Text>
@@ -40,13 +40,13 @@ var ZipCodeEntry = React.createClass({
     );
   },
 
-  handleZipAddition: function (value) {
+  handleZipAddition(value) {
     var zips = (_.clone(this.props.value) || []);
     zips.push(value);
     this.props.onChange('zipCodes', zips);
   },
 
-  handleZipRemove: function (index) {
+  handleZipRemove(index) {
     var zips = (_.clone(this.props.value) || []);
     zips.splice(index, 1);
     this.props.onChange('zipCodes', zips);
@@ -55,17 +55,17 @@ var ZipCodeEntry = React.createClass({
 
 
 var ZipCodeInput = React.createClass({
-  getInitialState: function() {
+  getInitialState() {
     return {
       value: ''
     };
   },
-  getDefaultProps: function() {
+  getDefaultProps() {
     return {
-      onAdd: function () {}
+      onAdd() {}
     };
   },
-  render: function() {
+  render() {
     return (
       <View>
         <TextInput
@@ -82,11 +82,11 @@ var ZipCodeInput = React.createClass({
     );
   },
 
-  handleChange: function (value) {
-    this.setState({value: value});
+  handleChange(value) {
+    this.setState({value});
   },
 
-  handleTextDone: function (event) {
+  handleTextDone(event) {
     console.log('handleTextDone');
     if (this.state.value) this.props.onAdd(this.state.value);
     this.setState({value: ''});
@@ -95,14 +95,14 @@ var ZipCodeInput = React.createClass({
 
 
 var ZipCodeBox = React.createClass({
-  getDefaultProps: function() {
+  getDefaultProps() {
     return {
       value: null,
       index: 0,
-      onRemove: function () {}
+      onRemove() {}
     };
   },
-  render: function() {
+  render() {
     return (
       <View style={styles.zipView}>
         <Text style={styles.zipText}>{this.props.value}</Text>
@@ -113,7 +113,7 @@ var ZipCodeBox = React.createClass({
     );
   },
 
-  handleClear: function () {
+  handleClear() {
     this.props.onRemove(this.props.index);
   }
 });

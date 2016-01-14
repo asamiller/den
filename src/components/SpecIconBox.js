@@ -10,7 +10,7 @@ import globalVariables from '../globalVariables.js';
 
 var SpecIconBox = React.createClass({
   
-  render: function() {
+  render() {
     return (
       <View style={styles.container}>
         <Image style={styles.icon} source={this.props.icon} />

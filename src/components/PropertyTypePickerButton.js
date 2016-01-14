@@ -11,9 +11,9 @@ var globalVariables = require('../globalVariables.js');
 
 var PropertyTypePickerButton = React.createClass({
 
-  getDefaultProps: function () {
+  getDefaultProps() {
       return {
-          onPress: function () {},
+          onPress() {},
           text: null,
           icon: null,
           value: null,
@@ -21,7 +21,7 @@ var PropertyTypePickerButton = React.createClass({
       };
   },
 
-  render: function() {
+  render() {
     var isActive = this.props.value === this.props.current;
 
     var icon = require('image!House');
@@ -49,7 +49,7 @@ var PropertyTypePickerButton = React.createClass({
     );
   },
 
-  handlePress: function () {
+  handlePress() {
     this.props.onPress(this.props.value);
   }
 

@@ -22,7 +22,7 @@ import globalVariables from './globalVariables.js';
 
 var SearchScreen = React.createClass({
   
-  getInitialState: function() {
+  getInitialState() {
     return {
       propertyType: 'DETACHD',
       builtRange: [1900, 2020],
@@ -33,7 +33,7 @@ var SearchScreen = React.createClass({
     };
   },
 
-  render: function() {
+  render() {
     return (
       <ScrollView style={styles.container}>
         <View style={styles.page}>
@@ -55,7 +55,7 @@ var SearchScreen = React.createClass({
     );
   },
 
-  onSearch: function() {
+  onSearch() {
     this.props.navigator.push({
       component: SearchResults,
       title: 'Search Results',
@@ -65,7 +65,7 @@ var SearchScreen = React.createClass({
     });
   },
 
-  saveQueryOptions: function(key, value) {
+  saveQueryOptions(key, value) {
     // console.log('saveQueryOptions', key, value);
     var temp = {};
     temp[key] = value;

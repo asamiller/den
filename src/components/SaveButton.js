@@ -12,19 +12,19 @@ var _ = require('lodash');
 
 var SaveButton = React.createClass({
 
-  getInitialState: function() {
+  getInitialState() {
     return {
       saved: false
     };
   },
 
-  getDefaultProps: function() {
+  getDefaultProps() {
     return {
       data: {}
     };
   },
   
-  componentDidMount: function() {
+  componentDidMount() {
     if (!this.props.data.house || !this.props.data.house.id) return;
 
     this.STORAGE_KEY = '@den-saved-' + this.props.data.house.id;
@@ -37,7 +37,7 @@ var SaveButton = React.createClass({
     .done();
   },
 
-  render: function() {
+  render() {
     var image = <Image source={require('image!Heart')} style={styles.image} />;
 
     if (this.state.saved) {
@@ -53,12 +53,12 @@ var SaveButton = React.createClass({
     );
   },
 
-  handlePress: function () {
+  handlePress() {
     if (this.state.saved) this.unsaveHouse();
     else this.saveHouse();
   },
 
-  saveHouse: function () {
+  saveHouse() {
     if (!this.STORAGE_KEY) return;
 
     this.setState({ saved: true });
@@ -71,7 +71,7 @@ var SaveButton = React.createClass({
     .done();
   },
 
-  unsaveHouse: function () {
+  unsaveHouse() {
     if (!this.STORAGE_KEY) return;
 
     this.setState({ saved: false });

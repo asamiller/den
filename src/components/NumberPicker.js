@@ -11,16 +11,16 @@ import NumberPickerItem from './NumberPickerItem.js';
 
 var NumberPicker = React.createClass({
 
-  getDefaultProps: function () {
+  getDefaultProps() {
     return {
-      onChange: function () {},
+      onChange() {},
       label: 'Bedrooms (at least)',
       value: 1,
       varName: 'bedrooms'
     };
   },
 
-  render: function() {
+  render() {
     return (
       <View style={globalStyles.container}>
         <Text style={globalStyles.label}>{this.props.label}</Text>
@@ -36,7 +36,7 @@ var NumberPicker = React.createClass({
     );
   },
 
-  handleChange: function (value) {
+  handleChange(value) {
     this.props.onChange(this.props.varName, value);
   }
 });
