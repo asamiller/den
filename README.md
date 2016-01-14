@@ -1,5 +1,5 @@
 # Den
-Den is an iPhone app built with React Native for viewing houses for sale in the NW from rmls.com. After being frsutrated with a site that hasn't changed since 2004, I decided to build a better viewing experince in the phone.
+Den is an iPhone app built with React Native for viewing houses for sale in the NW from rmls.com. After being frustrated with a site that hasn't changed since 2004, I decided to build a better viewing experience in the phone.
 
 The app was built in a weekend (or so) by one designer and one developer.
 
