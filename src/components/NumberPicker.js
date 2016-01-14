@@ -1,6 +1,6 @@
 'use strict';
 
-var React = require('react-native');
+import React from 'react-native';
 var {
 	StyleSheet,
 	Text,
@@ -8,8 +8,8 @@ var {
 	SliderIOS
 } = React;
 
-var globalStyles = require('./SearchGlobalStyles.js');
-var NumberPickerItem = require('./NumberPickerItem.js');
+import globalStyles from './SearchGlobalStyles.js';
+import NumberPickerItem from './NumberPickerItem.js';
 
 var NumberPicker = React.createClass({
 

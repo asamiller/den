@@ -1,6 +1,6 @@
 'use strict';
 
-var React = require('react-native');
+import React from 'react-native';
 var {
 	Image,
 	TouchableOpacity,
@@ -9,8 +9,8 @@ var {
 	View,
 } = React;
 
-var globalStyles = require('./SearchGlobalStyles.js');
-var PricePicker = require('./PricePicker.js');
+import globalStyles from './SearchGlobalStyles.js';
+import PricePicker from './PricePicker.js';
 
 var PriceRangePicker = React.createClass({
 

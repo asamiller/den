@@ -1,6 +1,6 @@
 'use strict';
 
-var React = require('react-native');
+import React from 'react-native';
 var {
 	TouchableOpacity,
 	StyleSheet,
@@ -9,7 +9,7 @@ var {
 	PickerIOS,
 } = React;
 
-var globalVariables = require('../globalVariables.js');
+import globalVariables from '../globalVariables.js';
 
 var PickerItemIOS = PickerIOS.Item;
 

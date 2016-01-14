@@ -1,13 +1,13 @@
 'use strict';
 
-var React = require('react-native');
+import React from 'react-native';
 var {
 	StyleSheet,
 	Image,
 	View,
 } = React;
 
-var Dimensions = require('Dimensions');
+import Dimensions from 'Dimensions';
 var {width, height} = Dimensions.get('window');
 
 var HouseDetailsCaroselImage = React.createClass({

@@ -1,6 +1,6 @@
 'use strict';
 
-var React = require('react-native');
+import React from 'react-native';
 var {
 	AppRegistry,
 	StyleSheet,
@@ -11,16 +11,14 @@ var {
 	PixelRatio,
 } = React;
 
-var Dimensions = require('Dimensions');
+import Dimensions from 'Dimensions';
 var {width, height} = Dimensions.get('window');
 
-var ScreenNavigator = require('./ScreenNavigator.js');
-
-var SearchScreen = require('./SearchScreen.js');
-var SavedScreen = require('./SavedScreen.js');
-var TabBarButton = require('./components/TabBarButton.js');
-
-var globalVariables = require('./globalVariables.js');
+import ScreenNavigator from './ScreenNavigator.js';
+import SearchScreen from './SearchScreen.js';
+import SavedScreen from './SavedScreen.js';
+import TabBarButton from './components/TabBarButton.js';
+import globalVariables from './globalVariables.js';
 
 var Den = React.createClass({
 

@@ -1,6 +1,6 @@
 'use strict';
 
-var React = require('react-native');
+import React from 'react-native';
 var {
 	Image,
 	TouchableOpacity,
@@ -9,8 +9,8 @@ var {
 	View,
 } = React;
 
-var PropertyTypePickerButton = require('./PropertyTypePickerButton.js');
-var styles = require('./SearchGlobalStyles.js');
+import PropertyTypePickerButton from './PropertyTypePickerButton.js';
+import styles from './SearchGlobalStyles.js';
 
 var PropertyTypePicker = React.createClass({
 

@@ -1,6 +1,6 @@
 'use strict';
 
-var React = require('react-native');
+import React from 'react-native';
 var {
 	TouchableOpacity,
 	ScrollView,
@@ -9,18 +9,16 @@ var {
 	View,
 } = React;
 
-var Dimensions = require('Dimensions');
+import Dimensions from 'Dimensions';
 var {width, height} = Dimensions.get('window');
 
-var PropertyTypePicker = require('./components/PropertyTypePicker.js');
-var BuiltRangePicker = require('./components/BuiltRangePicker.js');
-var PriceRangePicker = require('./components/PriceRangePicker.js');
-var ZipCodeEntry = require('./components/ZipCodeEntry.js');
-var NumberPicker = require('./components/NumberPicker.js');
-
-var SearchResults = require('./components/SearchResults.js');
-
-var globalVariables = require('./globalVariables.js');
+import PropertyTypePicker from './components/PropertyTypePicker.js';
+import BuiltRangePicker from './components/BuiltRangePicker.js';
+import PriceRangePicker from './components/PriceRangePicker.js';
+import ZipCodeEntry from './components/ZipCodeEntry.js';
+import NumberPicker from './components/NumberPicker.js';
+import SearchResults from './components/SearchResults.js';
+import globalVariables from './globalVariables.js';
 
 
 

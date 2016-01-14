@@ -1,13 +1,13 @@
 'use strict';
 
-var React = require('react-native');
+import React from 'react-native';
 var {
 	StyleSheet,
 	Text,
 	View,
 } = React;
 
-var globalVariables = require('../globalVariables.js');
+import globalVariables from '../globalVariables.js';
 
 var KVBox = React.createClass({
 

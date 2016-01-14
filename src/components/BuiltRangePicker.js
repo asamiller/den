@@ -1,6 +1,6 @@
 'use strict';
 
-var React = require('react-native');
+import React from 'react-native';
 var {
 	Image,
 	TouchableOpacity,
@@ -9,8 +9,8 @@ var {
 	View,
 } = React;
 
-var globalStyles = require('./SearchGlobalStyles.js');
-var YearPicker = require('./YearPicker.js');
+import globalStyles from './SearchGlobalStyles.js';
+import YearPicker from './YearPicker.js';
 
 var BuiltRangePicker = React.createClass({
 

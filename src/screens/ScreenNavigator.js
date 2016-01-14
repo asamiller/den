@@ -1,14 +1,13 @@
 'use strict';
 
-var React = require('react-native');
+import React from 'react-native';
 var {
 	NavigatorIOS,
 	StyleSheet
 } = React;
 
-var globalVariables = require('./globalVariables.js');
-
-var Dimensions = require('Dimensions');
+import globalVariables from './globalVariables.js';
+import Dimensions from 'Dimensions';
 var {width, height} = Dimensions.get('window');
 
 var ScreenNavigator = React.createClass({

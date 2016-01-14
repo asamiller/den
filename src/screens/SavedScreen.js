@@ -1,6 +1,6 @@
 'use strict';
 
-var React = require('react-native');
+import React from 'react-native';
 var {
 	ActivityIndicatorIOS,
 	ListView,
@@ -11,12 +11,10 @@ var {
 	AsyncStorage
 } = React;
 
-var _ = require('lodash');
-
-var HouseCell = require('./components/HouseCell.js');
-var HouseDetails = require('./components/HouseDetails.js');
-
-var Dimensions = require('Dimensions');
+import _ from 'lodash';
+import HouseCell from './components/HouseCell.js';
+import HouseDetails from './components/HouseDetails.js';
+import Dimensions from 'Dimensions';
 var {width, height} = Dimensions.get('window');
 
 var SavedScreen = React.createClass({
