@@ -23,7 +23,7 @@ const HouseCell = React.createClass({
       type: 'search'
     };
   },
-  
+
   render() {
     let ribbonBox = (
       <View style={styles.priceContainer}>
@@ -187,4 +187,4 @@ const styles = StyleSheet.create({
 
 });
 
-module.exports = HouseCell;
+export default HouseCell;

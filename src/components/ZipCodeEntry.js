@@ -170,5 +170,5 @@ const styles = StyleSheet.create({
 });
 
 
-module.exports = ZipCodeEntry;
+export default ZipCodeEntry;
 

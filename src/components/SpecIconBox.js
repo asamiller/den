@@ -50,4 +50,4 @@ const styles = StyleSheet.create({
   },
 });
 
-module.exports = SpecIconBox;
+export default SpecIconBox;

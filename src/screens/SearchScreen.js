@@ -96,4 +96,4 @@ const styles = StyleSheet.create({
   }
 });
 
-module.exports = SearchScreen;
+export default SearchScreen;

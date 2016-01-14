@@ -69,4 +69,4 @@ const styles = StyleSheet.create({
 });
 
 
-module.exports = PricePicker;
+export default PricePicker;

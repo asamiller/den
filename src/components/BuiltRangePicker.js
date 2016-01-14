@@ -48,4 +48,4 @@ const styles = StyleSheet.create({
   },
 });
 
-module.exports = BuiltRangePicker;
+export default BuiltRangePicker;

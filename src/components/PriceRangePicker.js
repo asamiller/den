@@ -48,4 +48,4 @@ const styles = StyleSheet.create({
   },
 });
 
-module.exports = PriceRangePicker;
+export default PriceRangePicker;

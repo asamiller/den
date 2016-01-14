@@ -68,4 +68,4 @@ const styles = StyleSheet.create({
 });
 
 
-module.exports = YearPicker;
+export default YearPicker;

@@ -33,4 +33,4 @@ const styles = StyleSheet.create({
   },
 });
 
-module.exports = ScreenNavigator;
+export default ScreenNavigator;

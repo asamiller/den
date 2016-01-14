@@ -48,5 +48,5 @@ const styles = StyleSheet.create({
 });
 
 
-module.exports = NumberPicker;
+export default NumberPicker;
 

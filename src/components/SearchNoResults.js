@@ -53,4 +53,4 @@ const styles = StyleSheet.create({
 
 });
 
-module.exports = SearchNoResults;
+export default SearchNoResults;

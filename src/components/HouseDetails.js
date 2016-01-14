@@ -365,4 +365,4 @@ const styles = StyleSheet.create({
   },
 });
 
-module.exports = HouseDetails;
+export default HouseDetails;

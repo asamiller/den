@@ -47,4 +47,4 @@ const styles = StyleSheet.create({
   },
 });
 
-module.exports = KVBox;
+export default KVBox;

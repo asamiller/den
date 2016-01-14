@@ -56,4 +56,4 @@ const PropertyTypePicker = React.createClass({
 
 
 
-module.exports = PropertyTypePicker;
+export default PropertyTypePicker;
