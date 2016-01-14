@@ -53,11 +53,11 @@ const SearchResults = React.createClass({
     if (!this.state.next && !this.state.searchPending) {
       return (
         <View style={styles.doneView}>
-          <Image source={require('image!foxy')} style={styles.doneImage} />
+          <Image source={require('../images/foxy.png')} style={styles.doneImage} />
         </View>
       );
     }
-    
+
     return <ActivityIndicatorIOS style={styles.scrollSpinner} />;
   },
 
@@ -104,13 +104,13 @@ const SearchResults = React.createClass({
     return (
       <View style={styles.container}>
         <ListView
-          ref="listview"
+          ref='listview'
           dataSource={this.state.dataSource}
           renderFooter={this.renderFooter}
           renderRow={this.renderRow}
           onEndReached={this.onEndReached}
           automaticallyAdjustContentInsets={false}
-          keyboardDismissMode="onDrag"
+          keyboardDismissMode='on-drag'
           keyboardShouldPersistTaps={false}
           showsVerticalScrollIndicator={true}
         />

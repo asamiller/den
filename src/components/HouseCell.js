@@ -5,16 +5,15 @@ const {
   PixelRatio,
   StyleSheet,
   Text,
-  TouchableHighlight,
-  View
+  TouchableOpacity,
+  View,
+  Dimensions,
 } = React;
 
 const globalVariables = require('../globalVariables.js');
 
 const moment = require('moment');
-
-const Dimensions = require('Dimensions');
-const {width, height} = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
 const HouseCell = React.createClass({
   getDefaultProps() {
@@ -48,7 +47,7 @@ const HouseCell = React.createClass({
       <View style={styles.item}>
         <ActivityIndicatorIOS style={styles.spinner} />
 
-        <TouchableHighlight underlayColor={'#fafafa'} activeOpacity={0.9} onPress={this.props.onSelect}>
+        <TouchableOpacity activeOpacity={0.9} onPress={this.props.onSelect}>
           <Image
             style={styles.image}
             source={{uri: this.props.house.image}}>
@@ -60,28 +59,28 @@ const HouseCell = React.createClass({
 
               <View style={styles.iconContainer}>
                 <View style={[styles.iconItem, styles.bedBoxIcons]}>
-                  <Image style={styles.iconImage} source={require('image!bed-icon')} />
+                  <Image style={styles.iconImage} source={require('../images/bed-icon.png')} />
                   <Text style={styles.iconText}>{this.props.house.specs.Beds}</Text>
                 </View>
 
                 <View style={[styles.iconItem, styles.bedBoxIcons]}>
-                  <Image style={styles.iconImage} source={require('image!bath-icon')} />
+                  <Image style={styles.iconImage} source={require('../images/bath-icon.png')} />
                   <Text style={styles.iconText}>{this.props.house.specs.Baths}</Text>
                 </View>
 
                 <View style={styles.iconItem}>
-                  <Image style={styles.iconImage} source={require('image!ruler-icon')} />
+                  <Image style={styles.iconImage} source={require('../images/ruler-icon.png')} />
                   <Text style={styles.iconText}>{this.props.house.specs.Sqft + ' sqft'}</Text>
                 </View>
 
                 <View style={styles.iconItem}>
-                  <Image style={styles.iconImage} source={require('image!crane-icon')} />
+                  <Image style={styles.iconImage} source={require('../images/crane-icon.png')} />
                   <Text style={styles.iconText}>{this.props.house.specs.YrBuilt}</Text>
                 </View>
               </View>
             </View>
           </Image>
-        </TouchableHighlight>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -109,7 +108,7 @@ const styles = StyleSheet.create({
 
   image: {
     height: 240,
-    resizeMode: Image.resizeMode.cover,
+    resizeMode: 'cover',
   },
 
   priceContainer: {

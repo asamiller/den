@@ -224,20 +224,20 @@ const HouseDetails = React.createClass({
         </View>
 
         <View style={styles.addressContainer}>
-          <Image style={styles.mapPin} source={require('image!map-pin')} />
+          <Image style={styles.mapPin} source={require('../images/map-pin.png')} />
           <Text style={styles.addressText} numberOfLines={1}>{this.props.house.specs.Address}</Text>
         </View>
 
         <View style={styles.iconContainer}>
-          <SpecIconBox value={this.props.house.specs.Beds} label={'Bedrooms'} icon={require('image!beds-large')} />
-          <SpecIconBox value={this.props.house.specs.Baths} label={'Bathrooms'} icon={require('image!bath-large')} />
-          <SpecIconBox value={this.props.house.specs.Sqft} label={'Square Footage'} icon={require('image!sqft-large')} />
+          <SpecIconBox value={this.props.house.specs.Beds} label={'Bedrooms'} icon={require('../images/beds-large.png')} />
+          <SpecIconBox value={this.props.house.specs.Baths} label={'Bathrooms'} icon={require('../images/bath-large.png')} />
+          <SpecIconBox value={this.props.house.specs.Sqft} label={'Square Footage'} icon={require('../images/sqft-large.png')} />
         </View>
 
         <View style={styles.iconContainer}>
-          <SpecIconBox value={this.props.house.specs.YrBuilt} label={'Year Built'} icon={require('image!year-large')} />
-          <SpecIconBox value={this.props.house.specs['NHood/Bldg']} label={'Neighborhood'} icon={require('image!neighborhood-large')} />
-          <SpecIconBox value={this.props.house.specs['Tax/Yr']} label={'Tax per Year'} icon={require('image!tax-large')} />
+          <SpecIconBox value={this.props.house.specs.YrBuilt} label={'Year Built'} icon={require('../images/year-large.png')} />
+          <SpecIconBox value={this.props.house.specs['NHood/Bldg']} label={'Neighborhood'} icon={require('../images/neighborhood-large.png')} />
+          <SpecIconBox value={this.props.house.specs['Tax/Yr']} label={'Tax per Year'} icon={require('../images/tax-large.png')} />
         </View>
 
 

@@ -16,7 +16,7 @@ import Dimensions from 'Dimensions';
 const {width, height} = Dimensions.get('window');
 
 const SavedScreen = React.createClass({
-  
+
   getInitialState() {
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 
@@ -84,7 +84,7 @@ const SavedScreen = React.createClass({
           items,
           loading: false
         });
-        
+
       } else {
         this.setState({ loading: false });
       }
@@ -128,13 +128,13 @@ const SavedScreen = React.createClass({
   render() {
     const content = (
       <ListView
-        ref="listview"
+        ref='listview'
         dataSource={this.state.dataSource}
         renderFooter={this.renderFooter}
         renderRow={this.renderRow}
         onEndReached={this.onEndReached}
         automaticallyAdjustContentInsets={true}
-        keyboardDismissMode="onDrag"
+        keyboardDismissMode='on-drag'
         keyboardShouldPersistTaps={false}
         showsVerticalScrollIndicator={true}
       />
