@@ -1,4 +1,4 @@
-const React = require('react-native');
+import React from 'react-native';
 const {
   StyleSheet,
   Image,
@@ -6,10 +6,10 @@ const {
   View,
 } = React;
 
-const Dimensions = require('Dimensions');
+import Dimensions from 'Dimensions';
 const {width, height} = Dimensions.get('window');
 
-const globalVariables = require('../globalVariables.js');
+import globalVariables from '../globalVariables.js';
 
 const SearchNoResults = React.createClass({
 

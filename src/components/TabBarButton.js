@@ -1,4 +1,4 @@
-const React = require('react-native');
+import React from 'react-native';
 const {
   StyleSheet,
   Text,
@@ -7,7 +7,7 @@ const {
   TouchableWithoutFeedback
 } = React;
 
-const globalVariables = require('../globalVariables.js');
+import globalVariables from '../globalVariables.js';
 
 const TabBarButton = React.createClass({
 

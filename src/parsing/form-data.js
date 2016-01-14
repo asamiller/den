@@ -1,4 +1,4 @@
-var $ = require('cheerio');
+import $ from 'cheerio';
 
 module.exports = function (input) {
 	var page = $.load(input);

@@ -1,8 +1,8 @@
-var $  = require('cheerio');
-var _  = require('lodash');
-var S  = require('string');
+import $  from 'cheerio';
+import _  from 'lodash';
+import S  from 'string';
 
-var getFormData = require('./form-data.js');
+import getFormData from './form-data.js';
 
 function findKeyValues (elements) {
 	var specs = {};

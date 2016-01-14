@@ -1,4 +1,4 @@
-const React = require('react-native');
+import React from 'react-native';
 const {
   ActivityIndicatorIOS,
   Image,
@@ -10,9 +10,9 @@ const {
   Dimensions,
 } = React;
 
-const globalVariables = require('../globalVariables.js');
+import globalVariables from '../globalVariables.js';
 
-const moment = require('moment');
+import moment from 'moment';
 const { width, height } = Dimensions.get('window');
 
 const HouseCell = React.createClass({

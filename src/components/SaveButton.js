@@ -1,4 +1,4 @@
-const React = require('react-native');
+import React from 'react-native';
 const {
   StyleSheet,
   Image,
@@ -8,7 +8,7 @@ const {
   TouchableOpacity
 } = React;
 
-const _ = require('lodash');
+import _ from 'lodash';
 
 const SaveButton = React.createClass({
 

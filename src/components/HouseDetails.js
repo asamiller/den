@@ -1,4 +1,4 @@
-const React = require('react-native');
+import React from 'react-native';
 const {
   ScrollView,
   StyleSheet,
@@ -8,23 +8,23 @@ const {
   MapView,
 } = React;
 
-const _ = require('lodash');
-const Dimensions = require('Dimensions');
+import _ from 'lodash';
+import Dimensions from 'Dimensions';
 const {width, height} = Dimensions.get('window');
 
-const HouseDetailsCaroselImage = require('./HouseDetailsCaroselImage.js');
-const SpecIconBox = require('./SpecIconBox.js');
-const KVBox = require('./KVBox.js');
+import HouseDetailsCaroselImage from './HouseDetailsCaroselImage.js';
+import SpecIconBox from './SpecIconBox.js';
+import KVBox from './KVBox.js';
 
-const SaveButton = require('./SaveButton.js');
+import SaveButton from './SaveButton.js';
 
-const parse = require('../parsing/index.js');
+import parse from '../parsing/index.js';
 
-const globalVariables = require('../globalVariables.js');
+import globalVariables from '../globalVariables.js';
 
 
 const HouseDetails = React.createClass({
-  
+
   getInitialState() {
     return {
       searchPending: false,
@@ -179,8 +179,8 @@ const HouseDetails = React.createClass({
     let mapPins = [];
     if (this.state.latitude) {
       mapPins = [{
-        latitude: this.state.latitude, 
-        longitude: this.state.longitude, 
+        latitude: this.state.latitude,
+        longitude: this.state.longitude,
         title: this.props.house.specs.Address,
       }];
     }

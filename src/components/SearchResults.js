@@ -1,4 +1,4 @@
-const React = require('react-native');
+import React from 'react-native';
 const {
   ActivityIndicatorIOS,
   ListView,
@@ -9,13 +9,13 @@ const {
   View,
 } = React;
 
-const HouseCell = require('./HouseCell.js');
-const HouseDetails = require('./HouseDetails.js');
-const SearchNoResults = require('./SearchNoResults.js');
+import HouseCell from './HouseCell.js';
+import HouseDetails from './HouseDetails.js';
+import SearchNoResults from './SearchNoResults.js';
 
-const parse = require('../parsing/index.js');
+import parse from '../parsing/index.js';
 
-const globalVariables = require('../globalVariables.js');
+import globalVariables from '../globalVariables.js';
 
 const SearchResults = React.createClass({
 

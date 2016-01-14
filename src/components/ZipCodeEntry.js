@@ -1,4 +1,4 @@
-const React = require('react-native');
+import React from 'react-native';
 const {
   Image,
   TouchableOpacity,
@@ -8,9 +8,9 @@ const {
   TextInput
 } = React;
 
-const globalStyles = require('./SearchGlobalStyles.js');
-const _ = require('lodash');
-const globalVariables = require('../globalVariables.js');
+import globalStyles from './SearchGlobalStyles.js';
+import _ from 'lodash';
+import globalVariables from '../globalVariables.js';
 
 const ZipCodeEntry = React.createClass({
   getDefaultProps() {

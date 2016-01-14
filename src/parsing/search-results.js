@@ -1,7 +1,7 @@
-var $  = require('cheerio');
-var S  = require('string');
+import $  from 'cheerio';
+import S  from 'string';
 
-var getFormData = require('./form-data.js');
+import getFormData from './form-data.js';
 
 module.exports = function (input) {
 	console.log('parsing search html');
