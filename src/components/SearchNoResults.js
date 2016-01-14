@@ -2,10 +2,10 @@
 
 var React = require('react-native');
 var {
-	StyleSheet,
-	Image,
-	Text,
-	View,
+  StyleSheet,
+  Image,
+  Text,
+  View,
 } = React;
 
 var Dimensions = require('Dimensions');
@@ -15,42 +15,42 @@ var globalVariables = require('../globalVariables.js');
 
 var SearchNoResults = React.createClass({
 
-	render: function() {
-		return (
-			<View style={styles.view}>
-				<Image source={require('image!sad-foxy')} style={styles.image} />
-				<Text style={styles.text}>
-					Oh no! There aren’t any houses 
-					that match your search!
-				</Text>
-			</View>
-		);
-	}
+  render: function() {
+    return (
+      <View style={styles.view}>
+        <Image source={require('image!sad-foxy')} style={styles.image} />
+        <Text style={styles.text}>
+          Oh no! There aren’t any houses 
+          that match your search!
+        </Text>
+      </View>
+    );
+  }
 });
 
 var styles = StyleSheet.create({
-	view: {
-		flexDirection: 'column',
-		justifyContent: 'center',
-		alignItems: 'center',
-		paddingTop: 100
-	},
+  view: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: 100
+  },
 
-	image: {
-		flex: 1,
-		width: 263, 
-		height: 218,
-	},
+  image: {
+    flex: 1,
+    width: 263, 
+    height: 218,
+  },
 
-	text: {
-		flex: 1,
-		padding: 40,
-		color: globalVariables.green,
-		textAlign: 'center',
-		fontWeight: 'bold',
-		fontSize: 17,
-		backgroundColor: 'transparent'
-	},
+  text: {
+    flex: 1,
+    padding: 40,
+    color: globalVariables.green,
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontSize: 17,
+    backgroundColor: 'transparent'
+  },
 
 
 });

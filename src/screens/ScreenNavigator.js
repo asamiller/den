@@ -2,8 +2,8 @@
 
 import React from 'react-native';
 var {
-	NavigatorIOS,
-	StyleSheet
+  NavigatorIOS,
+  StyleSheet
 } = React;
 
 import globalVariables from './globalVariables.js';
@@ -11,28 +11,28 @@ import Dimensions from 'Dimensions';
 var {width, height} = Dimensions.get('window');
 
 var ScreenNavigator = React.createClass({
-	getDefaultProps: function() {
-		return {
-			title: '',
-			component: null
-		};
-	},
-	render: function() {
-		return (
-			<NavigatorIOS
-				style={styles.container}
-				tintColor={globalVariables.green}
-				initialRoute={this.props}
-			/>
-		);
-	},
+  getDefaultProps: function() {
+    return {
+      title: '',
+      component: null
+    };
+  },
+  render: function() {
+    return (
+      <NavigatorIOS
+        style={styles.container}
+        tintColor={globalVariables.green}
+        initialRoute={this.props}
+      />
+    );
+  },
 });
 
 var styles = StyleSheet.create({
-	container: {
-		width: width, 
-		height: height - 49
-	},
+  container: {
+    width: width, 
+    height: height - 49
+  },
 });
 
 module.exports = ScreenNavigator;

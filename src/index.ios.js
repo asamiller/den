@@ -2,13 +2,13 @@
 
 import React from 'react-native';
 var {
-	AppRegistry,
-	StyleSheet,
-	Text,
-	View,
-	NavigatorIOS,
-	TabBarIOS,
-	PixelRatio,
+  AppRegistry,
+  StyleSheet,
+  Text,
+  View,
+  NavigatorIOS,
+  TabBarIOS,
+  PixelRatio,
 } = React;
 
 import Dimensions from 'Dimensions';
@@ -22,50 +22,50 @@ import globalVariables from './globalVariables.js';
 
 var Den = React.createClass({
 
-	getInitialState: function() {
-		return {
-			tab: 'search',
-		};
-	},
+  getInitialState: function() {
+    return {
+      tab: 'search',
+    };
+  },
 
-	render: function() {
-		var screenElement;
+  render: function() {
+    var screenElement;
 
-		if (this.state.tab == 'saved') screenElement = (<ScreenNavigator title='Saved' component={SavedScreen} key='saved' />);
-		else screenElement = (<ScreenNavigator title='Search' component={SearchScreen} key='search' />);
+    if (this.state.tab == 'saved') screenElement = (<ScreenNavigator title='Saved' component={SavedScreen} key='saved' />);
+    else screenElement = (<ScreenNavigator title='Search' component={SearchScreen} key='search' />);
 
-		return (
-			<View style={styles.app}>
-				{screenElement}
-				<View style={styles.tabbar}>
-					<TabBarButton tab='search' label='Homes' selected={this.state.tab} onChange={this.handleSelect} />
-					<TabBarButton tab='saved' label='Saved' selected={this.state.tab} onChange={this.handleSelect} />
-				</View>
-			</View>
-		);
-	},
+    return (
+      <View style={styles.app}>
+        {screenElement}
+        <View style={styles.tabbar}>
+          <TabBarButton tab='search' label='Homes' selected={this.state.tab} onChange={this.handleSelect} />
+          <TabBarButton tab='saved' label='Saved' selected={this.state.tab} onChange={this.handleSelect} />
+        </View>
+      </View>
+    );
+  },
 
 
-	handleSelect: function(tab) {
-		this.setState({
-			tab: tab,
-		});
-	},
+  handleSelect: function(tab) {
+    this.setState({
+      tab: tab,
+    });
+  },
 });
 
 var styles = StyleSheet.create({
-	app: { width, height },
+  app: { width, height },
 
-	tabbar: {
-		width: width,
-		height: 49,
-		shadowColor: 'black',
- 		shadowOffset: { height: -2, width: 0 },
- 		shadowOpacity: 0.05,
- 		shadowRadius: 3,
-		flexDirection: 'row',
-		justifyContent: 'center'
-	}
+  tabbar: {
+    width: width,
+    height: 49,
+    shadowColor: 'black',
+     shadowOffset: { height: -2, width: 0 },
+     shadowOpacity: 0.05,
+     shadowRadius: 3,
+    flexDirection: 'row',
+    justifyContent: 'center'
+  }
 });
 
 AppRegistry.registerComponent('Den', () => Den);
